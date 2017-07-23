@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
 
 
 import logo from './logo.svg';
@@ -32,7 +33,7 @@ class App extends Component {
         return (
             <div className="App">
                 <ul> {this.state.messages.map(item =>
-                    <li>{item.text}</li>)}
+                    <li><Link to={`/msg/${item.id}`}>{item.text}</Link></li>)}
                 </ul>
             </div>
         );
